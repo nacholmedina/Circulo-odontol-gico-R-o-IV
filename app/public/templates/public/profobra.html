@@ -1,0 +1,21 @@
+{% extends "base_template.html" %}
+{% block title %}
+    Profesionales por Obra Social
+{% endblock %}
+{% block contenido %}
+<div class="table-responsive containericons col-md-6 ml-auto mr-auto mt-3">
+    <table class="table table-sm table-hover table-light ml-auto mr-auto mt-2 mb-2">
+    <tr class="table-primary">
+        <th>Profesional</th>
+        <th>Obra Social</th>
+    </tr>
+    {% for profobra in prof_obra_list %}
+    <tr>
+        <td>{{profobra.profesional}}</td>
+        <td>{{profobra.obrasoc}}</td>
+    </tr>
+    {% endfor %}
+</table>
+</div>
+
+{% endblock %}

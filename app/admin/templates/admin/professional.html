@@ -1,0 +1,52 @@
+{% extends "base_template.html" %}
+    {% block title %}
+        Profesional
+    {% endblock %}
+    {% block contenido %}
+    <br>
+    <br>
+    <br>
+    <div class="container-md d-md-flex">
+        <div class="container-md col-sm-3 containericons text-center">
+            <br>
+            <div>
+                <img class="img-fluid" src="/static/images/iconpatient.png" alt="">
+            </div>
+            <br>
+            <div>
+                <a href='{{ url_for("admin.formpatient") }}'><button type="button" class="btn btnlogin btn-light">Ingreso de Paciente</button></a>
+            </div>
+            <br>
+            <br>
+        </div>
+        <div class="container-md col-sm-3 containericons text-center">
+            <br>
+            <div>
+                <img class="img-fluid" src="/static/images/iconregister.png" alt="">
+            </div>
+            <br>
+            <div>
+                <a href='{{ url_for("admin.formfile") }}'><button type="button" class="btn btnlogin btn-light">Carga de Nueva Ficha</button></a>
+            </div>
+            <br>
+            <br>
+        </div>
+        <div class="container-md col-sm-3 containericons text-center">
+            <br>
+            <div>
+                <img class="img-fluid" src="/static/images/iconhealth.png" alt="">
+            </div>
+            <br>
+            <div>
+                <button type="button" class="btn btnlogin btn-light">Consultar Obra Social</button>
+            </div>
+            <br>
+            <br>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    {% endblock %}

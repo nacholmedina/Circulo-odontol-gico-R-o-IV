@@ -1,0 +1,63 @@
+{% extends "base_template.html" %}
+  {% block title %}
+      Carga de Resumen
+  {% endblock %}
+    {% block contenido %}
+    <br>
+    <br>
+    
+    <div class="container textlogin">
+      <form class="containericons p-5 m-4 needs-validation formpatient textlogin" action ="/formfile"  method="POST">
+        <div class="form-row">
+          <div class="col-md-3 mb-3">
+            <label class="textlogin" for="validationTooltip01">Matricula</label>
+            <input class="form-control" type="text" value="{{ current_user.matricula }}" aria-label="Nombre- profesional" disabled readonly>
+            <div class="valid-tooltip">
+              Correcto!
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label class="textlogin" for="validationTooltip01">Profesional</label>
+            <input class="form-control" type="text" value="{{ current_user.name.title() }}" aria-label="Nombre- profesional" disabled readonly>
+            <div class="valid-tooltip">
+              Correcto!
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-4 ">
+              {{ form.obrasocial.label}}
+              {{ form.obrasocial(class="form-control") }}<br>
+              <!-- LE MOSTRAMOS AL USUARIO EL ERROR DE VALIDACIÓN -->
+              {% for error in form.obrasocial.errors %}
+              <div class="error-text">{{ error }}</div>
+              {% endfor %}
+          </div>
+          <div class="col-md-3">
+              {{ form.plan.label }}
+              {{ form.plan(class="form-control") }} <br>
+              <!-- LE MOSTRAMOS AL USUARIO EL ERROR DE VALIDACIÓN -->
+              {% for error in form.plan.errors %}
+              <div class="error-text">{{ error }}</div>            
+              {% endfor %}
+          </div>
+        </div>
+        <div>
+            {{ form.numafil.label }}
+            {{ form.csrf_token }}
+            {{ form.numafil(class="form-control col-md-3") }}<br>
+            <!-- LE MOSTRAMOS AL USUARIO EL ERROR DE VALIDACIÓN -->
+            {% for error in form.numafil.errors %}
+            <div class="error-text">{{ error }}</div>
+            {% endfor %}
+        </div>
+        <div>
+          {{ form.submit(class="btn btnlogin") }}
+        </div>
+      </form>
+    </div>     
+
+        <br>
+        <br>
+        <br>
+  {% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base_template.html" %}
+{% block title %}
+    Detalle Resumenes
+{% endblock %}
+{% block contenido %}
+<div class="table-responsive w-100 h-100 col-md-11 containericons2 ml-auto mr-auto mt-5"> 
+<table class="table  container-fluid table-hover table-light  mt-2 mb-4 ">
+    <tr class="table-primary">
+        <th>Registro</th>
+        <th>Paciente</th>
+        <th>N° Afiliado</th>
+        <th>Obra Social</th>
+        <th>Diente</th>
+        <th>Cara</th>
+        <th>Total</th>
+        <th>Fecha</th>
+    </tr>
+    {% for detalle in resumen_list %}
+    <tr>
+        <td>{{detalle.registro}}</td>
+        <td>{{detalle.nom_paciente}}</td>
+        <td>{{detalle.n_afiliado}}</td>
+        <td>{{detalle.obra_social}}</td>
+        <td>{{detalle.diente}}</td>
+        <td>{{detalle.cara}}</td>
+        <td>{{detalle.total}}</td>
+        <td>{{detalle.fecha}}</td>
+    </tr>
+    {% endfor %}
+</table>
+</div>
+{% endblock %}

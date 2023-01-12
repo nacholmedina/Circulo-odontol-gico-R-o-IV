@@ -1,0 +1,48 @@
+{% extends "base_template.html" %}
+    {% block title %}
+        Manager
+    {% endblock %}
+    {% block contenido %}
+    
+    <br>
+    <br>
+    <br>
+    <div class="container-md d-md-flex">
+        <div class="container-md col-sm-3 containericons text-center">
+            <br>
+            <div>
+                <img class="img-fluid" src="/static/images/iconmed.png" alt="">
+            </div>
+            <br>
+            <div>
+                <a href='{{ url_for("admin.formprofessional") }}'><button type="button" class="btn btnlogin btn-light">Ingreso de Profesional</button></a>
+            </div>
+            <br>
+            <br>
+        </div>
+        <div class="container-md col-sm-3 containericons text-center">
+            <br>
+            <div>
+                <img class="img-fluid" src="/static/images/iconregister.png" alt="">
+            </div>
+            <br>
+            <div>
+                <a href='{{ url_for("admin.resumenview") }}'><button type="button" class="btn btnlogin btn-light">Consulta de Registros</button></a>
+            </div>
+            <br>
+            <br>
+        </div>
+        <div class="container-md col-sm-3 containericons text-center">
+            <br>
+            <div>
+                <img class="img-fluid" src="/static/images/iconhealth.png" alt="">
+            </div>
+            <br>
+            <div>
+                <button type="button" class="btn btnlogin btn-light">Agregar Obra Social</button>
+            </div>
+            <br>
+            <br>
+        </div>
+    </div>
+    {% endblock %}

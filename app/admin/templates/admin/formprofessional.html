@@ -1,0 +1,108 @@
+{% extends "base_template.html" %}
+    {% block contenido %}
+   
+    <div class="container">
+        <form class="containericons p-5 m-4 needs-validation formpatient" novalidate>
+          <h2 class="textlogin text-center">Ingreso de Profesional</h2>
+          <br>
+            <div class="form-row">
+              <div class="col-md-3 mb-3">
+                <label class="textlogin" for="validationTooltip01">Nombre</label>
+                <input type="text" class="form-control" id="validationTooltip01" placeholder="Nombre del profesional"  required>
+                <div class="valid-tooltip">
+                  Correcto!
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label class="textlogin" for="validationTooltip02">Matrícula</label>
+                <input type="text" class="form-control" id="validationTooltip02" placeholder="Matrícula del profesional"  required>
+                <div class="valid-tooltip">
+                  Correcto!
+                </div>
+              </div>
+              <div class="col-md-3 mb-2">
+                <div class="form-group">
+                    <label class="textlogin" for="exampleFormControlSelect1">Especialidad</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                      <option>M</option>
+                      <option>F</option>
+                    </select>
+                  </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label class="textlogin" for="validationTooltipUsername">Fecha de nacimiento</label>
+                <div class="input-group">
+                  <input type="date" class="form-control" id="validationTooltipUsername" placeholder="Username" aria-describedby="validationTooltipUsernamePrepend" required>
+                  <div class="invalid-tooltip">
+                    Please choose a unique and valid username.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-1 mb-2">
+                <div class="form-group">
+                    <label class="textlogin" for="exampleFormControlSelect1">Género</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                      <option>M</option>
+                      <option>F</option>
+                    </select>
+                  </div>
+              </div>
+              <div class="col-md-3 mb-2">
+                <label class="textlogin" for="validationTooltip05">DNI</label>
+                <input type="text" class="form-control" id="validationTooltip05" placeholder="DNI del profesional" required>
+                <div class="invalid-tooltip">
+                  Please provide a valid zip.
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <label class="textlogin" for="validationTooltip04">Dirección</label>
+                <input type="text" class="form-control" id="validationTooltip04" placeholder="Dirección del lugar donde atiende" required>
+                <div class="invalid-tooltip">
+                  Please provide a valid state.
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label class="textlogin" for="validationTooltip05">Mail</label>
+                <input type="text" class="form-control" id="validationTooltip05" placeholder="Mail del profesional" required>
+                <div class="invalid-tooltip">
+                  Please provide a valid zip.
+                </div>
+              </div>
+            </div>
+              <div class="form-row">
+                <div class="col-md-3 mb-3">
+                  <label class="textlogin" for="exampleFormControlSelect1">Condición Fiscal</label>
+                  <select class="form-control" id="exampleFormControlSelect1">
+                    <option>M</option>
+                    <option>F</option>
+                  </select>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <label class="textlogin" for="exampleFormControlSelect1">Localidad</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                      <option>M</option>
+                      <option>F</option>
+                    </select>
+                </div>
+                <div class="col-md-2 mb-3">
+                  <label class="textlogin" for="validationTooltip05">Teléfono</label>
+                  <input type="text" class="form-control" id="validationTooltip05" placeholder="Teléfono" required>
+                  <div class="invalid-tooltip">
+                    Please provide a valid zip.
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <label class="textlogin" for="validationTooltip05">Contraseña</label>
+                  <input type="text" class="form-control" id="validationTooltip05" placeholder="Contraseña del usuario" required>
+                </div>
+              </div>
+              <div class="text-right">
+              <button class="btn  btnlogin" type="submit">Siguiente</button>
+            </div>
+            </div>
+          </form>
+        </div>
+    
+    {% endblock %}
